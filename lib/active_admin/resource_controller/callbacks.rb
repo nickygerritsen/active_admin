@@ -35,7 +35,7 @@ module ActiveAdmin
         # possibly contains the role, it's optional, to use in mass assignment. This feature is provided by Rails 3.1
         if attributes.is_a?(Array)
           if object.respond_to?(:assign_attributes)
-            object.assign_attributes(*attributes)
+            object.assign_attributes(*attributes, as: :admin)
           else
             object.attributes = attributes[0]
           end
