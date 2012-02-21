@@ -21,19 +21,8 @@ need to run the Active Admin install generator.
 
     $> rails generate active_admin:install
 
-This will install Active Admin the default settings. By default it will create a
-new Devise user / model called AdminUser. To change the name of the user class,
-simply pass the class as the last argument:
-
-    $> rails generate active_admin:install User
-
-Instead of generating an AdminUser class, this command will create a User class.
-
-You can skip the Devise user class all together by using the `skip-users` flag:
-
-    $> rails generate active_admin:install --skip-users
-
-NOTE: If you don't use the default user settings, you will need to configure the
+This will install Active Admin the default settings. It will not create a devise user
+NOTE: You will need to configure the
 settings in `config/intializers/active_admin.rb` to suite your needs.
 
 After running the installer, run `rake db:migrate` to ensure that all db tables

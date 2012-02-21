@@ -4,8 +4,6 @@ module ActiveAdmin
       desc "Installs Active Admin and generats the necessary migrations"
       argument :name, :type => :string, :default => "AdminUser"
 
-      hook_for :users, :default => "devise", :desc => "Admin user generator to run. Skip with --skip-users"
-
       include Rails::Generators::Migration
 
       def self.source_root
